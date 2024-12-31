@@ -84,6 +84,6 @@ int main(){
     cout<<endl<<product(a);
     cout<<endl<<minInTree(a);
     cout<<endl;
-    nthLevel(a,1,2);
+    nthLevel(a,1,3);
 }
      

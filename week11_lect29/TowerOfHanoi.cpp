@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-void hanoi(int n,char s,char h,char d){
+void hanoi(int n,char s,char h,char d){    //Source Helper Destination
     if(n==0) return;
     hanoi(n-1,s,d,h);
     cout<<s<<"->"<<d<<endl;

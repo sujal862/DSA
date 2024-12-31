@@ -59,7 +59,6 @@ int main(){
     a->left = b; a->right = c;
     b->left = d; b->right = e;
     c->left = f; c->right = g;
-    vector<int> dec; 
     if(isCBT(a) && isMax(a)) cout<<"Given Binary Tree is a MaxHeap";
     else cout<<"Given Binary Tree is Not a MaxHeap";
 }

@@ -12,7 +12,7 @@ class Stack{
     void push(int x){
         idx++;
         arr[idx]=x;
-    }
+    }       
     void pop(){
         idx--;
     }

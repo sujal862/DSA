@@ -12,6 +12,7 @@ class Node{
         this->right=NULL;
     }
 };
+// BFS -> 2 way 
 void levelOrderQueue(Node* root){   //BFS -> VIMP
     queue<Node*>q;
     q.push(root);
@@ -25,21 +26,21 @@ void levelOrderQueue(Node* root){   //BFS -> VIMP
     cout<<endl;
 }
 
-// void levelOrderQueue(Node* root){   //BFS    ----->  line by line print
-//     queue<Node*>q;
-//     q.push(root);
-//     while(q.size()>0){
-//         int n =q.size();
-//         for(int i=0;i<n;i++){
-//         Node* temp = q.front();
-//         q.pop();
-//         cout<<temp->val<<" ";
-//         if(temp->left!=NULL) q.push(temp->left);
-//         if(temp->right!=NULL) q.push(temp->right);
-//         }
-//     cout<<endl;
-//     }
-// }
+void levelOrderQueue2(Node* root){   //BFS  ----->  line by line print
+    queue<Node*>q;
+    q.push(root);
+    while(q.size()>0){
+        int n = q.size();
+        while(n--){
+        Node* temp = q.front();
+        q.pop();
+        cout<<temp->val<<" ";
+        if(temp->left!=NULL) q.push(temp->left);
+        if(temp->right!=NULL) q.push(temp->right);
+        }
+    cout<<endl;
+    }
+}
 
 int main(){
     Node* a = new Node(1);  //root
@@ -57,7 +58,7 @@ int main(){
     c->left = f;
     c->right = g;
 
-    levelOrderQueue(a);  
+    levelOrderQueue2(a);  
 
 }
      

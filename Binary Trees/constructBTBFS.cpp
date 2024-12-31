@@ -61,7 +61,5 @@ int main(){
     Node* root =  construct(arr, n);
 
     levelOrderQueue(root);
-    topView(root);
-
 }
      
