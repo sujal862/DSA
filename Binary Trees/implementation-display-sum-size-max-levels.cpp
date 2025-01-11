@@ -17,6 +17,7 @@ void displayTree(Node* root){
         cout<<root->val<<" ";
         displayTree(root->left);
         displayTree(root->right);
+        
     }
 
 int sum(Node* root){
