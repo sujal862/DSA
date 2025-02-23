@@ -13,3 +13,6 @@ int main (){
     cout<<gcd(a,b); // standard = b<a but if b>a than also it will handle upr jaka reverse khud hojayaga
 }
 
+
+
+// Note = gcd(a, b)*lcm(a,b) = a*b
