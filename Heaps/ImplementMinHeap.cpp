@@ -4,7 +4,7 @@ using namespace std;
 class MinHeap{
     public:
     int arr[50];
-    int idx;
+    int idx; 
     MinHeap(){
         idx = 1;
     }
@@ -38,7 +38,7 @@ class MinHeap{
             int left = 2*i , right = 2*i+1;
             //if child are greater than size
             if(left > idx-1) break;
-            if(right > idx-1){
+            if(right > idx-1){ // left exsists
                 if(arr[i] > arr[left]){
                     swap(arr[i],arr[left]);
                     i = left;
