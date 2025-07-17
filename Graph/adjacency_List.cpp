@@ -4,10 +4,10 @@ using namespace std;
 vector< list<int> > graph;
 int v; //no. of vertices
 void add_edge(int src, int dest, bool bi_dir = true) { //default bi_dir = true
-    graph[src].push_back(dest);
+    graph[src].push_back(dest);     
     if(bi_dir){
         graph[dest].push_back(src);
-    }
+    }  
 }
 
 void display() {
@@ -29,7 +29,7 @@ int main() {
     while(e--) {
         int s, d;
         cin>>s>>d;
-        add_edge(s, d, false);
+        add_edge(s, d, true);
     }
     display();
 }
