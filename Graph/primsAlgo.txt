@@ -1,0 +1,16 @@
+DS - Visited set, priority_queue<pair>, unorderd_map
+
+- insert the pair of < -1, src > in the pq.
+- one by one remove the root element of the pq.
+- if the root elememt is already visited, then we will just continue.
+- we mark the root visited // pq sa nikalta sma hum visited mark kr rha (final answer ma jayga wo)
+- we store the wt of the pair in the ans
+- update the mapping
+- go to every neibhour of the curr element, and  only add those which are non visited and have a 
+    better wt proposition
+ 
+
+
+
+ # reason of Now, from all vertices already in MST, choose the minimum edge going outside:
+ - minimum edge har bar pick karne se hum koi dusra already visited node ko ek optimal minimum weight ke through visit kar sakte hai, right

@@ -1,0 +1,1 @@
+{"name":"Local: Matrix_chain_multiplication","url":"d:\\Coding\\Decode (C++ & DSA)\\DP\\Matrix_chain_multiplication.cpp","tests":[{"id":1758194970134,"input":"5\n40 20 30 10 30","output":"26000"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding\\Decode (C++ & DSA)\\DP\\Matrix_chain_multiplication.cpp","group":"local","local":true}

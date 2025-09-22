@@ -2,18 +2,18 @@
 using namespace std;
 
 int find(vector<int> &parent, int x) {
-    //T.c = O(log*n) ~ cont
+    //T.c = O(log*n) ~> const
     //this method returns which group/cluster x belongs to
     if (parent[x] == x) return x;
     return parent[x] = find(parent, parent[x]);
 }
 
-void Union(vector<int> &parent, vector<int> &rank, int a, int b) {
+bool Union(vector<int> &parent, vector<int> &rank, int a, int b) {
     //T.c = O(log*n)
     a = find(parent, a);
     b = find(parent, b);
 
-    if(a==b) return; //both x and y belongs to same set
+    if(a==b) return true; // both vertices belongs to same cluster
 
     if (rank[a] <= rank[b]) {
         parent[a] = b;
@@ -22,6 +22,8 @@ void Union(vector<int> &parent, vector<int> &rank, int a, int b) {
         parent[b] = a;
         rank[a]++;
     }
+
+    return false;
 }   
 
 int main() {
@@ -36,24 +38,13 @@ int main() {
     }
 
     while (m--) {
-        string str;
-        cin >> str;
-        if (str == "union") {
-            int x, y;
-            cin >> x >> y;
-            Union(parent, rank, x, y);
-        } else {
-            int x;
-            cin >> x; 
-            cout << find(parent, x) << "\n";
-        }
+        int x, y;
+        cin >> x >> y;
+        bool res = Union(parent, rank, x, y);
+        if(res) cout<<"Cycle Detected\n";
     }
     return 0;
 }
 
 
-
-
-
-
-
+// total TC = O(e*(log*n)) ~> O(e);  e = number edges = no. of union oper

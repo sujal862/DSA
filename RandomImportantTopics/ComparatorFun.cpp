@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-//goal = first got sorted in asc order and if first is equal sor second in desc order
+//goal = pair sorting : pair.first got sorted in asc order and if first is equal sort second in desc order
 
 //custom comp = if wants to swap return false and if not return true
 // bool should_i_swap(pair<int, int> a, pair<int, int> b){
@@ -21,7 +21,7 @@ using namespace std;
 // It returns false otherwise.
 bool should_i_swap(pair<int, int> a, pair<int, int> b){
     if(a.first != b.first) {
-        return a.first < b.first;   // a pick ho jayga agr ya true hua else agr false hua ya condition to b pick hojayga (pick ho jayga mtlb wo pahla aa jayga)
+        return a.first < b.first;  // humko ya condition chiya : if already hai to true return hoga (i.e no swap req) else agr ni hai condition satisfy to false return hoga (i.e swap is req)
     } else { 
         return a.second > b.second;
     }

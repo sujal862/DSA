@@ -9,11 +9,11 @@ void subArray(int arr[],vector<int>ans,int n,int idx){
         cout<<endl;
         return;
     }
-    subArray(arr,ans,n,idx+1);
+    subArray(arr,ans,n,idx+1); // left call aways
 
     if(ans.size()==0 || arr[idx-1]==ans[ans.size()-1]){   
     ans.push_back(arr[idx]);
-    subArray(arr,ans,n,idx+1);   
+    subArray(arr,ans,n,idx+1);   // right call 
     }
 
 }
@@ -23,3 +23,23 @@ int main(){
     vector<int>ans;
     subArray(arr,ans,n,0);
 }
+
+
+
+//iterative
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main() {
+//     int arr[] = {1, 2, 3, 4};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+
+//     for(int i = 0; i < n; i++){
+//         for(int k = i; k <n; k ++){ //expands after all sunarrays from i to k got printed from inner(j) loop
+//             for(int j = i; j <= k; j++ ){
+//                 cout<<arr[j];
+//             }
+//             cout<<endl;
+//         }
+//     }
+// }

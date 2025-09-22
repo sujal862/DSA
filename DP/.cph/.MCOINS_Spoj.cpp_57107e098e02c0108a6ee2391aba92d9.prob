@@ -1,0 +1,1 @@
+{"name":"Local: MCOINS_Spoj","url":"d:\\Coding\\Decode (C++ & DSA)\\DP\\MCOINS_Spoj.cpp","tests":[{"id":1758007532783,"input":"2 3 5 \n3 12 113 25714 88888","output":"ABAAB"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding\\Decode (C++ & DSA)\\DP\\MCOINS_Spoj.cpp","group":"local","local":true}
